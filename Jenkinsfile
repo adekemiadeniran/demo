@@ -33,5 +33,16 @@ pipeline {
             }
         }
     }
+    
 }
+post {
 
+   success {
+
+       mail to: 'oyejope@gmail.com',
+       subject: 'Build Success',
+       body: 'Pipeline Success'
+
+   }
+
+}
