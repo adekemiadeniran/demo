@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Start') {
+            steps {
+                echo 'Pipeline Started'
+            }
+        }
+
+        stage('Show Files') {
+            steps {
+                sh 'ls'
+            }
+        }
+
+        stage('Backup File') {
+            steps {
+                sh 'cp notes.txt backup/'
+            }
+        }
+
+        stage('Check Backup') {
+            steps {
+                sh 'ls backup'
+            }
+        }
+
+        stage('Finish') {
+            steps {
+                echo 'Backup Completed'
+            }
+        }
+    }
+}
+cmp-jnya-imo
