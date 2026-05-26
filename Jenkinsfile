@@ -17,13 +17,13 @@ pipeline {
 
         stage('Backup File') {
             steps {
-                sh 'cp notes.txt backup/'
+                sh 'cp notes.txt backup'
             }
         }
 
         stage('Check Backup') {
             steps {
-                sh 'ls backup'
+                sh 'cat backup'
             }
         }
 
@@ -34,4 +34,4 @@ pipeline {
         }
     }
 }
-cmp-jnya-imo
+
